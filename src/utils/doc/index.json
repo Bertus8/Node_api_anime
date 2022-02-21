@@ -1,0 +1,84 @@
+{
+    "App": "Anime Server",
+    "Elements":[{
+        "Users":[{
+            "Name":"New User",
+            "Description":"Add new user",
+            "EndPoint":"/api/users",
+            "Action":"POST",
+            "Parameters":{
+                "name":"",
+                "email":"",
+                "password":""
+            },
+            "Response":{
+                "_id": "",
+                "name": "",
+                "email": "",
+                "password": "",
+                "createdAt": "",
+                "updatedAt": ""
+            }
+        },{
+            "Name":"Get User",
+            "Description":"Get a user",
+            "EndPoint":"/api/users/:id",
+            "Action":"GET",
+            "Authentication":{
+                "bearer":""
+            },
+            "Response":{
+                "name": "",
+                "email": ""
+            }
+        },{
+            "Name":"LogIn User",
+            "Description":"Log a user",
+            "EndPoint":"/api/users/login",
+            "Action":"POST",
+            "Parameters":{
+                "email":"",
+                "password":""
+            },
+            "Response":{
+                "token": ""
+            }
+        },{
+            "Name":"LogOut User",
+            "Description":"Log out a user ",
+            "EndPoint":"/api/users/login",
+            "Action":"POST",
+            "Authentication":{
+                "bearer":""
+            },
+            "Response":{
+                "token": null
+            }
+        }
+    ]},{
+        "Animes":[{
+            "Name":"Get Anime",
+            "Description":"Get a anime",
+            "EndPoint":"/api/animes/:id",
+            "Action":"GET"
+            }
+        ,{
+            "Name":"Get All Animes",
+            "Description":"Get all animes",
+            "EndPoint":"/api/animes",
+            "Action":"GET"
+        },{
+        "Character":[{
+            "Name":"Get Character",
+            "Description":"Get a Character",
+            "EndPoint":"/api/characters/:id",
+            "Action":"GET"
+        },{
+            "Name":"Get All Characters",
+            "Description":"Get all characters",
+            "EndPoint":"/api/characters",
+            "Action":"GET"
+            }]
+    }]
+}]
+}
